@@ -74,6 +74,7 @@
     <Folder Include="sas\Tables\" />
     <Folder Include="Storage\" />
     <Folder Include="Security\" />
+    <Folder Include="dbo\Views\" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="ch\Tables\CALENDAR_DATE.sql" />
@@ -115,16 +116,13 @@
     <Build Include="sas\Tables\TOB_FACILITY_TYPE_CODE.sql" />
     <Build Include="sas\Tables\TOB_SEQUENCE_CODE.sql" />
     <Build Include="Storage\XTP.sql" />
-    <Build Include="Security\AzureSQLDataOps.sql" />
-    <Build Include="Security\adfuser.sql" />
-    <Build Include="Security\RoleMemberships.sql" />
-    <Build Include="Security\MasterKeys.sql" />
     <Build Include="Security\conifer.sql" />
     <Build Include="Security\ch.sql" />
     <Build Include="Security\cms.sql" />
     <Build Include="Security\resdac.sql" />
     <Build Include="Security\sas.sql" />
     <Build Include="Security\nucc.sql" />
-    <Build Include="Security\DatabaseEncryptionKeys.sql" />
+    <Build Include="dbo\Tables\RANJIT_TABLE.sql" />
+    <Build Include="dbo\Views\RANJIT_VIEW.sql" />
   </ItemGroup>
 </Project>
