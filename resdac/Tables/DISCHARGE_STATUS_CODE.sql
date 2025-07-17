@@ -1,0 +1,9 @@
+﻿CREATE TABLE [resdac].[DISCHARGE_STATUS_CODE] (
+    [DISCHARGE_STATUS_CODE]        VARCHAR (2)   NOT NULL,
+    [DISCHARGE_STATUS_DESCRIPTION] VARCHAR (320) NULL,
+    [RCRD_ORDR]                    BIGINT        IDENTITY (1, 1) NOT NULL,
+    [RCRD_LOAD_DTTM]               DATETIME      DEFAULT (getdate()) NOT NULL,
+    [RCRD_LOAD_USER_NM]            VARCHAR (50)  DEFAULT (user_name()) NOT NULL,
+    [SRC_DATA_NM]                  VARCHAR (200) NOT NULL
+);
+

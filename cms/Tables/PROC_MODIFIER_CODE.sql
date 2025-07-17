@@ -1,0 +1,10 @@
+﻿CREATE TABLE [cms].[PROC_MODIFIER_CODE] (
+    [PROC_MODIFIER_CODE]        CHAR (2)       NOT NULL,
+    [PROC_MODIFIER_CLASS]       VARCHAR (254)  NULL,
+    [PROC_MODIFIER_DESCRIPTION] VARCHAR (2000) NULL,
+    [RCRD_ORDR]                 BIGINT         IDENTITY (1, 1) NOT NULL,
+    [RCRD_LOAD_DTTM]            DATETIME       DEFAULT (getdate()) NOT NULL,
+    [RCRD_LOAD_USER_NM]         VARCHAR (50)   DEFAULT (user_name()) NOT NULL,
+    [SRC_DATA_NM]               VARCHAR (200)  NOT NULL
+);
+

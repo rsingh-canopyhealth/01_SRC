@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>_01_SRC</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{56f25a17-c39b-4160-af01-f7897e8c6f51}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql160DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>_01_SRC</RootNamespace>
+    <AssemblyName>_01_SRC</AssemblyName>
+    <ModelCollation>1033,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>SQL_Latin1_General_CP1_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="ch\" />
+    <Folder Include="ch\Tables\" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="resdac\" />
+    <Folder Include="resdac\Tables\" />
+    <Folder Include="cms\" />
+    <Folder Include="cms\Tables\" />
+    <Folder Include="conifer\" />
+    <Folder Include="conifer\Tables\" />
+    <Folder Include="nucc\" />
+    <Folder Include="nucc\Tables\" />
+    <Folder Include="sas\" />
+    <Folder Include="sas\Tables\" />
+    <Folder Include="Storage\" />
+    <Folder Include="Security\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="ch\Tables\CALENDAR_DATE.sql" />
+    <Build Include="ch\Tables\CALENDAR_HOLIDAY.sql" />
+    <Build Include="ch\Tables\DYAD.sql" />
+    <Build Include="ch\Tables\PROC_CODE.sql" />
+    <Build Include="dbo\Tables\DataAnalysis.sql" />
+    <Build Include="resdac\Tables\ADMIT_TYPE_CODE.sql" />
+    <Build Include="cms\Tables\HCPCS_BETOS_CODE.sql" />
+    <Build Include="cms\Tables\HCPCS_COVERAGE_CODE.sql" />
+    <Build Include="cms\Tables\HCPCS_LAB_CERTIFICATION_CODE.sql" />
+    <Build Include="cms\Tables\HCPCS_MULTIPLE_PRICING_INDICATOR_CODE.sql" />
+    <Build Include="cms\Tables\HCPCS_PRICING_INDICATOR_CODE.sql" />
+    <Build Include="cms\Tables\HCPCS_PROC_TOS_CODE.sql" />
+    <Build Include="cms\Tables\ICD_PCS_CODE.sql" />
+    <Build Include="cms\Tables\POA_INDICATOR_CODE.sql" />
+    <Build Include="cms\Tables\POS_CODE.sql" />
+    <Build Include="cms\Tables\PROC_MODIFIER_CODE.sql" />
+    <Build Include="conifer\Tables\BENEFIT_MASTER_CODE.sql" />
+    <Build Include="conifer\Tables\CLAIM.sql" />
+    <Build Include="conifer\Tables\CLAIM_ADJUSTMENT_REASON_CODE.sql" />
+    <Build Include="conifer\Tables\DRUG_DOSAGE_FORM_CODE.sql" />
+    <Build Include="conifer\Tables\DRUG_ROUTE_CODE.sql" />
+    <Build Include="conifer\Tables\FINANCIAL_RESPONSIBILITY_CODE.sql" />
+    <Build Include="conifer\Tables\MSO_PROVIDER_CONTRACT_STATUS_CODE.sql" />
+    <Build Include="conifer\Tables\OCCURRENCE_CODE.sql" />
+    <Build Include="conifer\Tables\PROVIDER_CLASS.sql" />
+    <Build Include="conifer\Tables\PROVIDER_NETWORK_STATUS_CODE.sql" />
+    <Build Include="conifer\Tables\PROVIDER_SPECIALTY_CODE.sql" />
+    <Build Include="conifer\Tables\PROVIDER_TYPE.sql" />
+    <Build Include="ch\Tables\RELATIONSHIP_CODE.sql" />
+    <Build Include="conifer\Tables\TOS_CODE.sql" />
+    <Build Include="nucc\Tables\CONDITION_CODE.sql" />
+    <Build Include="nucc\Tables\TAXONOMY_CODE.sql" />
+    <Build Include="resdac\Tables\ADMIT_SOURCE_CODE.sql" />
+    <Build Include="resdac\Tables\DISCHARGE_STATUS_CODE.sql" />
+    <Build Include="resdac\Tables\REVENUE_CODE.sql" />
+    <Build Include="dbo\Tables\DataProfiling.sql" />
+    <Build Include="sas\Tables\TOB_FACILITY_TYPE_CODE.sql" />
+    <Build Include="sas\Tables\TOB_SEQUENCE_CODE.sql" />
+    <Build Include="Storage\XTP.sql" />
+    <Build Include="Security\AzureSQLDataOps.sql" />
+    <Build Include="Security\adfuser.sql" />
+    <Build Include="Security\RoleMemberships.sql" />
+    <Build Include="Security\MasterKeys.sql" />
+    <Build Include="Security\conifer.sql" />
+    <Build Include="Security\ch.sql" />
+    <Build Include="Security\cms.sql" />
+    <Build Include="Security\resdac.sql" />
+    <Build Include="Security\sas.sql" />
+    <Build Include="Security\nucc.sql" />
+    <Build Include="Security\DatabaseEncryptionKeys.sql" />
+  </ItemGroup>
+</Project>

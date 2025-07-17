@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [nucc]
+    AUTHORIZATION [dbo];
+

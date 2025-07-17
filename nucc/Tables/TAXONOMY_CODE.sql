@@ -1,0 +1,15 @@
+﻿CREATE TABLE [nucc].[TAXONOMY_CODE] (
+    [CODE]              VARCHAR (50)   NULL,
+    [GROUPING]          VARCHAR (254)  NULL,
+    [CLASSIFICATION]    VARCHAR (254)  NULL,
+    [SPECIALIZATION]    VARCHAR (254)  NULL,
+    [DEFINITION]        VARCHAR (3000) NULL,
+    [NOTES]             VARCHAR (2000) NULL,
+    [DISPLAY_NAME]      VARCHAR (254)  NULL,
+    [SECTION]           VARCHAR (100)  NULL,
+    [RCRD_ORDR]         BIGINT         IDENTITY (1, 1) NOT NULL,
+    [RCRD_LOAD_DTTM]    DATETIME       DEFAULT (getdate()) NOT NULL,
+    [RCRD_LOAD_USER_NM] VARCHAR (50)   DEFAULT (user_name()) NOT NULL,
+    [SRC_DATA_NM]       VARCHAR (200)  NOT NULL
+);
+
